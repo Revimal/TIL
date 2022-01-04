@@ -1,0 +1,23 @@
+# 2021-01-04
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      environment: sandbox
+      app: nginx
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        environment: sandbox
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:1.14.2
+          ports:
+          - containerPort: 80
