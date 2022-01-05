@@ -13,5 +13,10 @@
 * 글로 정리할 수 있는 지식이 진짜로 내가 이해한 지식이라는 생각도 들어서
 
 ### TIL 리스트
+
+#### [Architecture & Design pattern](architecture_and_design_pattern)
+
+* [MVC Pattern 기본 개념](architecture_and_design_pattern/MVC_Pattern_기본_개념.md)
+
 #### [Kubernetes](k8s)
 * [Kubernetes 겉핥기](k8s/Kubernetes_겉핥기.md)
