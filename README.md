@@ -14,8 +14,10 @@
 
 ### TIL 리스트
 
-#### [Architecture & Design pattern](architecture_and_design_pattern)
+### [General Knowledge](general_knowledge)
+* [Sync/Async & Blocking/Non-blocking 개념 정리](general_knowledge/Sync_Async_and_Blocking_Non-blocking_개념_정리.md)
 
+#### [Architecture & Design pattern](architecture_and_design_pattern)
 * [MVC Pattern 기본 개념](architecture_and_design_pattern/MVC_Pattern_기본_개념.md)
 
 #### [Kubernetes](k8s)
