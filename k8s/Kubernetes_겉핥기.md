@@ -1,6 +1,6 @@
 # Kubernetes 겉핥기
 
-_2021/01/04_
+_2022/01/04_
 
 ### 개요
 
@@ -94,7 +94,7 @@ _k8s 클러스터 구성에는 최소 2개의 장비가 필요하지만, 집에 
 2. 작성한 yaml 파일을 kubectl을 통해 적용
 
    ```bash
-   hhseo@hhseo-desktop:~$ microk8s kubectl apply -f ~/TIL/src/k8s/sandbox-nginx-pod.yml 
+   hhseo@hhseo-desktop:~$ microk8s kubectl apply -f ~/TIL/src/k8s/sandbox-nginx-pod.yml
    pod/nginx-pod created
    ```
 
@@ -126,12 +126,12 @@ _k8s 클러스터 구성에는 최소 2개의 장비가 필요하지만, 집에 
    <h1>Welcome to nginx!</h1>
    <p>If you see this page, the nginx web server is successfully installed and
    working. Further configuration is required.</p>
-   
+
    <p>For online documentation and support please refer to
    <a href="http://nginx.org/">nginx.org</a>.<br/>
    Commercial support is available at
    <a href="http://nginx.com/">nginx.com</a>.</p>
-   
+
    <p><em>Thank you for using nginx.</em></p>
    </body>
    </html>
@@ -150,23 +150,23 @@ _k8s 클러스터 구성에는 최소 2개의 장비가 필요하지만, 집에 
    Waiting for possible shutdown message on port 4445
    summary +  24062 in   2.2s = 10877.9/s Avg:     0 Min:     0 Max:    30 Err:     0 (0.00%) Active: 3 Started: 3 Finished: 0
    ```
-   
+
 6. 팟에 실제로 부하가 걸리고 있는지 확인
 
    ```bash
    hhseo@hhseo-desktop:~$ while true; do microk8s kubectl top pod nginx-pod; sleep 1; done
-   NAME        CPU(cores)   MEMORY(bytes)   
-   nginx-pod   0m           2Mi           
-   NAME        CPU(cores)   MEMORY(bytes)   
-   nginx-pod   0m           2Mi      
-   NAME        CPU(cores)   MEMORY(bytes)   
-   nginx-pod   165m         3Mi           
+   NAME        CPU(cores)   MEMORY(bytes)
+   nginx-pod   0m           2Mi
+   NAME        CPU(cores)   MEMORY(bytes)
+   nginx-pod   0m           2Mi
+   NAME        CPU(cores)   MEMORY(bytes)
+   nginx-pod   165m         3Mi
    ```
 
 7. 이제는 필요 없어진 팟을 제거
 
    ```bash
-   hhseo@hhseo-desktop:~$ microk8s kubectl delete pod nginx-pod 
+   hhseo@hhseo-desktop:~$ microk8s kubectl delete pod nginx-pod
    pod "nginx-pod" deleted
    hhseo@hhseo-desktop:~$ microk8s kubectl get pod
    No resources found in default namespace.
@@ -305,7 +305,7 @@ _k8s 클러스터 구성에는 최소 2개의 장비가 필요하지만, 집에 
 ---
 
 [^1]: 여러 노드에 존재하는 컨테이너들을 통합 관리 및 자동화 한다고 이해하고 넘어가자
-[^2]: 컨테이너를 실행시킬 수 있는 소프트웨어로, 대표적으로 containerd나 Docker 등이 존재 
+[^2]: 컨테이너를 실행시킬 수 있는 소프트웨어로, 대표적으로 containerd나 Docker 등이 존재
 [^3]: 물류 처리에서 Hub-And-Spoke 방식이라고 부르는 형상을 그려보면 보면 이해하기 편함
 [^4]: 모든 설정과 상태가 저장되기에 이 친구만 백업하면 클러스터 복구 가능
 [^5]: Single Point Of Failure, 그러니까 '얘 죽으면 전부 다 죽어요'라는 의미
