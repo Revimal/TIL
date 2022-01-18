@@ -17,7 +17,7 @@ _2022/01/18_
 
 ### 기존 아키텍쳐를 통합한 결과
 
-<img src="/Users/hhseo/Workspace/TIL/img/architecture_and_design_pattern/Clean_Architecture_Bob_Simplified.png" alt="Clean Architecture Overview" style="zoom:50%;" />
+![Clean Architecture Overview](../img/architecture_and_design_pattern/Clean_Architecture_Bob_Simplified.png)
 
 * 일단은 전체 구조를 2가지로 나누어 보자.
   * Inner Circle = Domain = 정책 = 비즈니스 로직 = 현실 세계를 추상화 = 고수준 = 안정적
@@ -28,7 +28,7 @@ _2022/01/18_
 
 ### 의존성 규칙
 
-<img src="/Users/hhseo/Workspace/TIL/img/architecture_and_design_pattern/Clean_Architecture_Bob_Cone.jpg" alt="Clean Architecture Cone" style="zoom:70%;" />
+![Clean Architecture Cone](../img/architecture_and_design_pattern/Clean_Architecture_Bob_Cone.jpg)
 
 * 소스코드의 종속성(=의존성)은 저수준에서 고수준으로, 즉 동심원들의 안쪽 방향으로만 향해야 함.
   * 서점의 책장이 쇠로 만들어졌건 나무로 만들어졌건, 서점이 책을 판다는 본질은 변하지 않음.
@@ -39,7 +39,7 @@ _2022/01/18_
 
 ### 각 계층의 상세 구조
 
-<img src="/Users/hhseo/Workspace/TIL/img/architecture_and_design_pattern/Clean_Architecture_Bob_Overview.jpg" alt="Clean Architecture Overview" style="zoom:70%;" />
+![Clean Architecture Overview](../img/architecture_and_design_pattern/Clean_Architecture_Bob_Overview.jpg)
 
 #### Entities(=엔티티)
 
@@ -108,14 +108,14 @@ _2022/01/18_
   * 근데, Model에서 View에 데이터를 전달하는 흐름은...?
   * 문제 발생!
 
-<img src="/Users/hhseo/Workspace/TIL/img/architecture_and_design_pattern/Clean_Architecture_Bob_Problem.png" alt="Clean Architecture Problem" style="zoom:80%;" />
+![Clean Architecture Problem](../img/architecture_and_design_pattern/Clean_Architecture_Bob_Problem.png)
 
 * 이때, 고수준의 계층에서 필요한 요구 사항만을 명세해놓은 중간 인터페이스를 두는 방식으로 해결할 수 있음.
   * 저수준 계층의 관점에서는, 조금 더 추상화 된 고수준의 인터페이스를 바라보기 때문에 Clean Architecture를 위배하지 않음.
   * 고수준 계층의 관점에서는, 같은 계층의 인터페이스를 바라보기 때문에 이 또한 Clean Architecture를 위배하지 않음.
   * 전체 구조 관점에서도, 고수준의 요구사항 명세와 저수준의 세부 사항이 분리 됨으로서 구현의 변경이 있어도 동작이 바뀌지 않게 됨.
 
-<img src="/Users/hhseo/Workspace/TIL/img/architecture_and_design_pattern/Clean_Architecture_Bob_Solve.png" alt="Clean Architecture Solve" style="zoom:80%;" />
+![Clean Architecture Solve](../img/architecture_and_design_pattern/Clean_Architecture_Bob_Solve.png)
 
 
 
