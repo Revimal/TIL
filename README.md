@@ -19,9 +19,9 @@
 
 #### [Architecture & Design pattern](architecture_and_design_pattern)
 * [MVC Pattern 기본 개념](architecture_and_design_pattern/MVC_Pattern_기본_개념.md)
+* [Clean Architecture by Uncle Bob](architecture_and_design_pattern/Clean_Architecture_by_Uncle_Bob.md)
 
 #### [Spring Boot](spring_boot)
-
 * [Spring Boot를 활용한 Ping 서버 #1: 구현 및 로컬 실행 환경](spring_boot/Spring_Boot를_활용한_Ping_서버_#1_구현_및_로컬_실행_환경.md)
 
 #### [Kubernetes](k8s)
