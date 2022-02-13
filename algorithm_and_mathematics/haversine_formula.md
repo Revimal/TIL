@@ -19,59 +19,26 @@ _2022/02/12_
 * 위도와 경도로 기술된, 구면 좌표계 상의 두 점 사이의 대원 거리를 구하는 공식.
 
 * 우선, 호의 중심각에 대한 수식을 보자.
-  $$
-  \text{[수식 1]}\\\\
-  \theta={d \over r}\\\\
-  \theta=\text{구면 상의 두 점을 잇는 호의 중심각 (이하, 중심각으로 칭함)}\\
-  d=\text{두 점 사이의 대원 거리}\\
-  r=\text{구의 반지름}
-  $$
-
+  
+  ![Formula-1](../img/algorithm_and_mathematics/haversine_formula_formula_1.png)
+  
 * 다음으로는, 두 점의 위도와 경도로부터 중심각의 Haversine[^1]을 구하는 수식을 보자.
 
+  ![Formula-2](../img/algorithm_and_mathematics/haversine_formula_formula_2.png)
   
-  $$
-  \text{[수식 2]}\\\\
-  hav(\theta)=hav(\phi_2-\phi_1)+cos(\phi_1)cos(\phi_2)hav(\lambda_2-\lambda_1)\\\\
-  \phi_1,\phi_2\text{는 각각 첫번째 점과 두번째 점의 위도}\\
-  \lambda_1,\lambda_2\text{는 각각 첫번째 점과 두번째 점의 경도}
-  $$
-
 * Haversine은 그 이름에서 알 수 있듯이 Versine[^2]의 절반을 계산하는 삼각함수이다.
 
 * 그에 따라, Haversine 함수는 아래와 같이도 표현될 수 있다.
 
+  ![Formula-3](../img/algorithm_and_mathematics/haversine_formula_formula_3.png)
   
-  $$
-  \text{[수식 3]}\\\\
-  versin(\theta)=1 - cos(\theta)=2sin^2({\theta \over 2 })\\
-  hav(\theta)={versin(\theta) \over 2}\\
-  \therefore hav(\theta)={{1 - cos(\theta)} \over 2}=sin^2({\theta \over 2})
-  $$
-
 * `[수식 1]` 과 `[수식 3]`을 가지고 중심각의 Haversine으로부터 두 점 사이의 대원거리를 구하는 수식을 만들어보자.
 
+  ![Formula-4](../img/algorithm_and_mathematics/haversine_formula_formula_4.png)
   
-  $$
-  \text{[수식 4]}\\\\
-  
-  hav(\theta)\text{를 }h\text{라고 하면,}\\
-  \theta=archav(h)\\
-  \text{[수식 3]에 의해, Archaversine은 }sin^2({\theta \over 2})\text{의 역함수인 }2arcsin(\sqrt{h})\text{와 같으므로,}\\
-  \theta=2arcsin(\sqrt{h})\\
-  \text{따라서, [수식 1]은 아래와 같이 표현될 수 있다.}\\
-  \theta={d \over r}=2arcsin(\sqrt{h})\\
-  \therefore d=2r \space arcsin(\sqrt{h})\\
-  $$
-
 * 최종적으로 `[수식 4]`의 h에 `[수식 2]`를 대입하면, 두 점의 위도와 경도로부터 대원거리를 구할 수 있게 된다.
 
-  
-  $$
-  \text{[Haversine Formula]}\\\\
-  
-  d=2r \space arcsin(\sqrt{hav(\phi_2-\phi_1)+cos(\phi_1)cos(\phi_2)hav(\lambda_2-\lambda_1))}\
-  $$
+  ![Formula-Final](../img/algorithm_and_mathematics/haversine_formula_formula_final.png)
 
 ### 고도를 포함시키기
 
@@ -81,22 +48,11 @@ _2022/02/12_
 
 * 이미 우리는 대원 거리를 구했으므로, 이를 통해 위도, 경도, 고도를 통해 기술된 두 위치를 아래와 같이 표현할 수 있다.
 
+  ![Euclidean-1](../img/algorithm_and_mathematics/haversine_formula_euclidean_1.png)
   
-  $$
-  \text{2차원 직교 좌표계 상의 두 점,}\\
-  P0(0, h_1), \space P1(d, h_2)\\\\
-  d=\text{Haversine formula로 구한 두 점 사이의 대원 거리}\\
-  h_1,h_2\text{는 각각 첫번째 점과 두번째 점의 고도}\\
-  $$
-
 *  이제, `P0`와 `P1`사이의 유클리디안 거리[^3]를 구하면 된다.
 
-
-$$
-l=\sqrt{d^2 + (h_2 - h_1)^2}\\\\
-
-l=\text{고도를 고려한 두 점 사이의 실제 거리}\\
-$$
+![Euclidean-2](../img/algorithm_and_mathematics/haversine_formula_euclidean_2.png)
 
 ### 구현 방법
 
