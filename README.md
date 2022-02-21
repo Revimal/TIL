@@ -26,7 +26,7 @@
 * [Haversine Formula](algorithm_and_mathematics/haversine_formula.md)
 
 #### [Spring Boot](spring_boot)
-* [Spring Boot를 활용한 Ping 서버 #1: 구현 및 로컬 실행 환경](spring_boot/Spring_Boot를_활용한_Ping_서버_#1_구현_및_로컬_실행_환경.md)
+* [Spring Boot를 활용한 Ping 서버 #1: 구현 및 로컬 실행 환경](spring_boot/Spring_Boot를_활용한_Ping_서버_1_구현_및_로컬_실행_환경.md)
 
 #### [Kubernetes](k8s)
 * [Kubernetes 겉핥기](k8s/Kubernetes_겉핥기.md)
