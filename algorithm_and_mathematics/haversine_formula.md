@@ -50,9 +50,9 @@ _2022/02/12_
 
   ![Euclidean-1](../img/algorithm_and_mathematics/haversine_formula_euclidean_1.png)
   
-*  이제, `P0`와 `P1`사이의 유클리디안 거리[^3]를 구하면 된다.
+* 이제, `P0`와 `P1`사이의 유클리디안 거리[^3]를 구하면 된다.
 
-![Euclidean-2](../img/algorithm_and_mathematics/haversine_formula_euclidean_2.png)
+  ![Euclidean-2](../img/algorithm_and_mathematics/haversine_formula_euclidean_2.png)
 
 ### 구현 방법
 
