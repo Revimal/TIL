@@ -30,3 +30,7 @@
 
 #### [Kubernetes](k8s)
 * [Kubernetes 겉핥기](k8s/Kubernetes_겉핥기.md)
+
+#### [Side Project](side_project)
+
+* [Kotlin 프로젝트에 린터 도입하기](side_project/Kotlin_프로젝트에_린터_도입하기.md)
