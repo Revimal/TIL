@@ -34,3 +34,4 @@
 #### [Side Project](side_project)
 
 * [Kotlin 프로젝트에 린터 도입하기](side_project/Kotlin_프로젝트에_린터_도입하기.md)
+* [Spring Boot에서 Kotlin 스타일로 테스트 하기](side_project/Spring_Boot에서_Kotlin_스타일로_테스트_하기.md)
