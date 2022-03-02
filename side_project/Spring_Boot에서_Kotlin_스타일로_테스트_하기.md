@@ -54,13 +54,13 @@ _2022/03/02_
   * **Infrastructure:** 어플리케이션과 독립적인 계층이니, 굳이 테스트를 수행한다면 Redis등을 사용한 통합 테스트?
   * **Adapters:** `WebTestClient`등으로 Request/Response를, Service는 Mockk로 모킹해서 Kotest 테스트 진행.
   * **Use Cases:** Repository를 Mockk로 모킹한 뒤, Kotest 테스트 진행.
-  * **Entity: ** 이상적인 상황이라면 Data class 형태일테니 테스트가 필요없겠지만, 그게 아니라면 Kotest로 유닛 테스트.
+  * **Entity:** 이상적인 상황이라면 Data class 형태일테니 테스트가 필요없겠지만, 그게 아니라면 Kotest로 유닛 테스트.
 
 #### 테스트 스타일 결정
 
 * Use Cases에 해당하는 Service 클래스들은 'Given-When-Then' 패턴으로 테스트하기로 결정.
 
-  * '주어진 상황이 있고 (Given)' / '무엇을 할 때에 (When)' / '이런. 결과가 나온다 (Then)'
+  * `주어진 상황이 있고 (Given)` / `무엇을 할 때에 (When)` / `이런. 결과가 나온다 (Then)`
 
   * 특정 행동에 따라, 특정 결과가 나올 것이 명확하게 구분되는 Service 로직의 테스트에 적합하다고 생각됐다.
 
@@ -87,7 +87,7 @@ _2022/03/02_
 
 * HTTP Request/Response를 직접 처리하는 Controller 클래스는, 'Describe-Context-It' 패턴으로 테스트하기로 결정.
 
-  * '특정 API를 (Describe)' / '사용자가 어떠한 식으로 사용하면 (Context)' / 'Controller는 이렇게 동작한다 (It)'
+  * `특정 API를 (Describe)` / `사용자가 어떠한 식으로 사용하면 (Context)` / `Controller는 이렇게 반응한다 (It)`
 
   * 사용자와 API의 상호 관계와, 그 동작 결과에 집중하는 특성은 Controller 로직의 테스트에 적합하다고 생각했다.
 
